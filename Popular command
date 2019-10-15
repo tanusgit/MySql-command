@@ -1,0 +1,69 @@
+
+DESCRIBE student;
+drop table student;
+describe student;
+create table student;
+CREATE TABLE student (
+student_id INT auto_increment,
+name VARCHAR(20),
+major VARCHAR(20),
+primary key(student_id)
+);
+drop table student;
+create TABLE studentB (
+student_id INT auto_increment,
+name VARCHAR(20),
+major VARCHAR(20),
+primary key(student_id)
+);
+
+describe student;
+alter table student add gpa decimal(2,1);
+insert into student values(1, 'Sina', 'Math', 3.22);
+insert into student values(2, 'Mina', 'CS', 3.22);
+insert into student values(3, 'Rina', 'Phil', 3.22);
+select * from studentB;
+insert into studentB (name, major) values('Lina', 'Math');
+insert into studentB (name, major) values('Minaina', 'chemistry');
+insert into studentB (name, major) values('Mio', 'Math');
+insert into studentB (name, major) values('Suhana', 'CS');
+insert into studentB(name, major) values('Rina', "bio");
+update studentB
+set major = "Biology"
+where major = "bio";
+update studentB
+set major = "Biology"
+where student_id = 1;
+update studentB
+set major = "Computer science";
+update studentB
+set name ="Mitali", major =" History"
+where student_id = 2;
+delete from studentB
+where student_id = 3;
+delete from studentB;
+create table employee(
+student_id INT auto_increment,
+name VARCHAR(20),
+major VARCHAR(20),
+primary key(student_id)
+);
+insert into employee (name, major) values('Lina', 'Math');
+insert into employee (name, major) values('Rina', 'CS');
+insert into employee (name, major) values('Tina', 'Chem');
+insert into employee (name, major) values('Mina', 'Bio');
+insert into employee (name, major) values('Sina', 'Phil');
+insert into employee (name, major) values('Maina', 'Phil');
+insert into employee (name, major) values('kina', 'Phil');
+insert into employee (name, major) values('Avina', 'Bio');
+select * from employee;
+select * from employee;
+select * from employee;
+update employee 
+set major = "CS"
+where major = "Math";
+select name from employee;
+select name, major from employee 
+order by name desc;
+
+
